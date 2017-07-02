@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.example.org/passengerProfile/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="passengerProfile" targetNamespace="http://www.example.org/passengerProfile/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.example.org/passengerProfile/">
+      <xsd:element name="createPassengerProfile">
+        <xsd:complexType>
+          <xsd:sequence>
+          	<xsd:element name="passengerProfileCreateRequest" type="tns:passengerProfileCreateRequestType"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createPassengerProfileResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+          	<xsd:element name="passengerProfileCreateResponse" type="tns:passengerProfileCreateResponseType"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPassengerProfile">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="passengerProfileGetRequest" type="tns:passengerProfileGetRequestType"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPassengerProfileResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="passengerProfileGetResponse" type="tns:passengerProfileGetResponseType"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updatePassengerProfile">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="passengerProfileUpdateRequest" type="tns:passengerProfileUpdateRequestType"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updatePassengerProfileResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="passengerProfileUpdateResponse" type="tns:passengerProfileUpdateResponseType"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deletePassengerProfile">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="passengerProfileDeleteRequest" type="tns:passengerProfileDeleteRequestType"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deletePassengerProfileResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="passengerProfileDeleteResponse" type="tns:passengerProfileDeleteResponseType"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+    
+      <xsd:complexType name="passengerProfileCreateRequestType">
+      	<xsd:sequence>
+      		<xsd:element name="profileId" type="xsd:string"></xsd:element>
+      		<xsd:element name="password" type="xsd:string"></xsd:element>
+      		<xsd:element name="firstName" type="xsd:string"></xsd:element>
+      		<xsd:element name="lastName" type="xsd:string"></xsd:element>
+      		<xsd:element name="address" type="xsd:string"></xsd:element>
+      		<xsd:element name="telephoneNo" type="xsd:string"></xsd:element>
+      		<xsd:element name="emailId" type="xsd:string"></xsd:element>
+      	</xsd:sequence>
+      </xsd:complexType>
+    
+      <xsd:complexType name="passengerProfileCreateResponseType">
+      	<xsd:sequence>
+      		<xsd:element name="profileId" type="xsd:string"></xsd:element>
+      		<xsd:element name="firstName" type="xsd:string"></xsd:element>
+      	</xsd:sequence>
+      </xsd:complexType>
+    
+      <xsd:complexType name="passengerProfileGetRequestType">
+      	<xsd:sequence>
+      		<xsd:element name="profileId" type="xsd:string"></xsd:element>
+      	</xsd:sequence>
+      </xsd:complexType>
+    
+      <xsd:complexType name="passengerProfileGetResponseType">
+      	<xsd:sequence>
+      		<xsd:element name="profileId" type="xsd:string"></xsd:element>
+      		<xsd:element name="firstName" type="xsd:string"></xsd:element>
+      		<xsd:element name="lastName" type="xsd:string"></xsd:element>
+      		<xsd:element name="address" type="xsd:string"></xsd:element>
+      		<xsd:element name="telephoneNo" type="xsd:string"></xsd:element>
+      		<xsd:element name="emailId" type="xsd:string"></xsd:element>
+      	</xsd:sequence>
+      </xsd:complexType>
+    
+      <xsd:complexType name="passengerProfileUpdateRequestType">
+      	<xsd:sequence>
+      		<xsd:element name="profileId" type="xsd:string"></xsd:element>
+      		<xsd:element name="firstName" type="xsd:string"></xsd:element>
+      		<xsd:element name="lastName" type="xsd:string"></xsd:element>
+      		<xsd:element name="address" type="xsd:string"></xsd:element>
+      		<xsd:element name="telephoneNo" type="xsd:string"></xsd:element>
+      		<xsd:element name="emailId" type="xsd:string"></xsd:element>
+      	</xsd:sequence>
+      </xsd:complexType>
+    
+      <xsd:complexType name="passengerProfileUpdateResponseType">
+      	<xsd:sequence>
+      		<xsd:element name="profileId" type="xsd:string"></xsd:element>
+      		<xsd:element name="firstName" type="xsd:string"></xsd:element>
+      	</xsd:sequence>
+      </xsd:complexType>
+    
+      <xsd:complexType name="passengerProfileDeleteRequestType">
+      	<xsd:sequence>
+      		<xsd:element name="profileId" type="xsd:string"></xsd:element>
+      	</xsd:sequence>
+      </xsd:complexType>
+    
+      <xsd:complexType name="passengerProfileDeleteResponseType">
+      	<xsd:sequence>
+      		<xsd:element name="profileId" type="xsd:string"></xsd:element>
+      		<xsd:element name="firstName" type="xsd:string"></xsd:element>
+      	</xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="createPassengerProfileRequest">
+    <wsdl:part element="tns:createPassengerProfile" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="createPassengerProfileResponse">
+    <wsdl:part element="tns:createPassengerProfileResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getPassengerProfileRequest">
+  	<wsdl:part name="parameters" element="tns:getPassengerProfile"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPassengerProfileResponse">
+  	<wsdl:part name="parameters" element="tns:getPassengerProfileResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updatePassengerProfileRequest">
+  	<wsdl:part name="parameters" element="tns:updatePassengerProfile"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updatePassengerProfileResponse">
+  	<wsdl:part name="parameters" element="tns:updatePassengerProfileResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deletePassengerProfileRequest">
+  	<wsdl:part name="parameters" element="tns:deletePassengerProfile"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deletePassengerProfileResponse">
+  	<wsdl:part name="parameters" element="tns:deletePassengerProfileResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="passengerProfileType">
+    <wsdl:operation name="createPassengerProfile">
+      <wsdl:input message="tns:createPassengerProfileRequest"/>
+      <wsdl:output message="tns:createPassengerProfileResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getPassengerProfile">
+    	<wsdl:input message="tns:getPassengerProfileRequest"></wsdl:input>
+    	<wsdl:output message="tns:getPassengerProfileResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePassengerProfile">
+    	<wsdl:input message="tns:updatePassengerProfileRequest"></wsdl:input>
+    	<wsdl:output message="tns:updatePassengerProfileResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletePassengerProfile">
+    	<wsdl:input message="tns:deletePassengerProfileRequest"></wsdl:input>
+    	<wsdl:output message="tns:deletePassengerProfileResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="passengerProfileBinding" type="tns:passengerProfileType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="createPassengerProfile">
+      <soap:operation soapAction="http://www.example.org/passengerProfile/createPassengerProfile"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPassengerProfile">
+      <soap:operation soapAction="http://www.example.org/passengerProfile/getPassengerProfile"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePassengerProfile">
+      <soap:operation soapAction="http://www.example.org/passengerProfile/updatePassengerProfile"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletePassengerProfile">
+      <soap:operation soapAction="http://www.example.org/passengerProfile/deletePassengerProfile"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="passengerProfile">
+    <wsdl:port binding="tns:passengerProfileBinding" name="passengerProfile">
+      <soap:address location="http://www.example.org/passengerProfile"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
